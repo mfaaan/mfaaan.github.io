@@ -123,11 +123,11 @@
   <section id="contact">
     <div class="container">
       <h2>Book a Session</h2>
-      <div class="panel" style="padding:20px;">
-        <iframe src="https://calendly.com/melissa_fan/somatic-bodywork?month=2025-09"
-                width="100%" height="700"
-                style="border:1px solid #ccc;border-radius:12px;">
-        </iframe>
+      <div class="panel" style="padding:0;">
+        <div class="calendly-inline-widget"
+             data-url="https://calendly.com/melissa_fan/somatic-bodywork?month=2025-09"
+             style="min-width:320px; height:800px;">
+        </div>
       </div>
     </div>
   </section>
@@ -139,6 +139,7 @@
     </div>
   </footer>
 
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     const burger=document.getElementById('burger');const menu=document.getElementById('menu');
     burger.addEventListener('click',()=>{const open=menu.style.display==='flex';menu.style.display=open?'none':'flex';menu.style.flexDirection='column';menu.style.gap='14px';menu.style.padding='12px 0 16px';burger.setAttribute('aria-expanded',String(!open));});
