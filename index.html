@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Melissa Anran Fan — Somatic Bodywork</title>
   <meta name="description" content="Somatic bodywork in North Oakland by Melissa Anran Fan. Simple, gentle, body-based care." />
-  <meta name="theme-color" content="#F4A300" />
+  <meta name="theme-color" content="#000000" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -13,8 +13,7 @@
     :root{
       --bg:#ffffff;
       --text:#111111;
-      --muted:#5a5a5a;
-      --accent:#F4A300;
+      --muted:#333333;
       --max:820px;
     }
     *{box-sizing:border-box}
@@ -27,21 +26,19 @@
       line-height:1.7;
       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
+    a{color:var(--text); text-decoration:underline}
     .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px}
     header.site{padding:8px 0}
     .brand{font-size:16px; letter-spacing:.2px; color:var(--muted)}
-    h1,h2{font-weight:800; margin:0 0 10px}
-    h1{font-size:36px; line-height:1.25; color:var(--accent)}
-    h2{font-size:24px; line-height:1.35; margin-top:30px; color:var(--accent)}
+    h1,h2{font-weight:800; margin:0 0 10px; color:var(--text)}
+    h1{font-size:36px; line-height:1.25}
+    h2{font-size:24px; line-height:1.35; margin-top:30px}
     p{margin:0 0 14px}
     img.resp{display:block; width:100%; height:auto; margin:10px 0 6px; border-radius:10px}
-    /* Full-bleed Calendly (edge-to-edge width) */
+    /* Full-bleed Calendly */
     .fullbleed{width:100vw; margin-left:calc(50% - 50vw); padding:0}
-    /* Calendly: no container chrome and no inner scroll, height adapts to viewport */
     #calWrap{margin-top:0}
-    .calendly-inline-widget{width:100%; height:900px;} /* JS recalculates */
+    .calendly-inline-widget{width:100%; height:900px;}
     @media (max-width:640px){
       .calendly-inline-widget{height:1000px}
       h1{font-size:30px} h2{font-size:22px}
@@ -57,7 +54,7 @@
 
     <h1>Touch to heal the spirit</h1>
 
-    <img class="resp" src="https://dummyimage.com/1600x900/ffffff/999999&text=Add+photo+of+Melissa+or+studio" alt="Photo placeholder">
+    <img class="resp" src="melissa.jpg" alt="Photo of Melissa Anran Fan">
 
     <section id="about">
       <h2>Welcome</h2>
@@ -72,23 +69,22 @@
       <p>Our bodies carry the stories of our lives, our ancestors, and our communities. Somatic bodywork is a hands-on way of working directly with and through the body to attune to and align with your values, longings, and commitments.</p>
       <p>Sessions take place fully clothed on a massage table. With a combination of touch, breath, movement, and awareness, we gently explore your unique holding patterns, shapes, and areas of tension. Together, we create space for you to express, release, and open into deeper aliveness.</p>
       <p>In somatic bodywork, you may experience a wide variety of sensations and emotions. Memories and visions may surface. My role is to support you through whatever arises.</p>
-      <p style="color:var(--muted); font-style:italic;">“Through bodywork, we go directly to our tissues—and to the patterns they carry—to meet them, relieve them, and create the conditions for lasting change.” — Strozzi Institute for Somatics</p>
+      <p style="font-style:italic;">“Through bodywork, we go directly to our tissues—and to the patterns they carry—to meet them, relieve them, and create the conditions for lasting change.” — Strozzi Institute for Somatics</p>
     </section>
 
     <section id="sessions">
       <h2>Sessions & Fees</h2>
       <p>I offer sessions in my North Oakland office or in your home.</p>
       <p><strong>Rates</strong><br>
-         • 60 min – $135<br>
-         • 90 min – $200<br>
-         • Home visits – additional $40 travel fee (within Berkeley or Oakland)</p>
-      <p><strong>Discounts:</strong> I am currently offering significant discounts for booking 5 or 10 session packages and paying upfront. A 5 session package is $600 and a 10 session package is $1000. Please reach out to book a package.</p>
-      <p><strong>Sliding Scale:</strong> A number of $50 - $100 sliding scale spots are reserved for low income BIPOC clients. Please reach out to request one.</p>
-      <p><strong>Mutual Aid for Gaza:</strong> 10% of all profits go toward mutual aid for families in Gaza through Watermelon Connections. In addition, I occasionally offer sessions in exchange for a full-fee donation to specific families in Gaza. Please reach out if you’d like to be notified about these sessions.</p>
+         • <strong>60 min – $135</strong><br>
+         • <strong>90 min – $200</strong><br>
+         • <strong>Home visits – additional $40 travel fee</strong> (within Berkeley or Oakland)</p>
+      <p><strong>Discounts:</strong> I am currently offering significant discounts for booking 5 or 10 session packages and paying upfront. A <strong>5 session package is $600</strong> and a <strong>10 session package is $1000</strong>. Please reach out to book a package.</p>
+      <p><strong>Sliding Scale:</strong> A number of <strong>$50 - $100 sliding scale spots</strong> are reserved for low income BIPOC clients. Please reach out to request one.</p>
+      <p><strong>Mutual Aid for Gaza:</strong> <strong>10% of all profits</strong> go toward mutual aid for families in Gaza through Watermelon Connections. In addition, I occasionally offer sessions in exchange for a full-fee donation to specific families in Gaza. Please reach out if you’d like to be notified about these sessions.</p>
     </section>
   </main>
 
-  <!-- Full-width Calendly section (outside .wrap to go truly edge-to-edge) -->
   <section class="fullbleed" id="contact">
     <div id="calWrap">
       <div id="calWidget" class="calendly-inline-widget"
@@ -100,7 +96,8 @@
 
   <main class="wrap">
     <section id="contact-info">
-      <p style="color:var(--muted)">Prefer email? <a href="mailto:melissa.anran.fan@gmail.com?subject=Somatic%20Bodywork%20Session%20Inquiry">melissa.anran.fan@gmail.com</a> • 6536 Telegraph Ave. Suite A101, Oakland, CA 94609</p>
+      <p><strong>Email:</strong> <a href="mailto:melissa.anran.fan@gmail.com?subject=Somatic%20Bodywork%20Session%20Inquiry">melissa.anran.fan@gmail.com</a><br>
+         <strong>Address:</strong> 6536 Telegraph Ave. Suite A101, Oakland, CA 94609</p>
     </section>
 
     <footer>
@@ -110,16 +107,12 @@
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
-    // Auto-set footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Make Calendly widget fit viewport height (no inner scrolling)
     function sizeCalendly(){
       const widget = document.getElementById('calWidget');
       if(!widget) return;
-      // Fill the viewport height, with a little breathing room
       let target = window.innerHeight - 24;
-      if (target < 720) target = 720; // minimum useful height
+      if (target < 720) target = 720;
       widget.style.height = target + 'px';
     }
     window.addEventListener('load', sizeCalendly);
