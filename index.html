@@ -8,16 +8,26 @@
   <meta property="og:title" content="Melissa Anran Fan — Somatic Bodywork" />
   <meta property="og:description" content="Somatic bodywork in North Oakland. Trauma-informed, community-rooted, accessible care." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#8e5ebf" />
+  <meta name="theme-color" content="#F4A300" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#fcfbfd;--panel:#ffffff;--text:#2e2a2f;--muted:#6f6874;--brand:#8e5ebf;--brand-2:#9bbf9c;--ring: rgba(142,94,191,.35);--radius:16px;--shadow:0 6px 20px rgba(0,0,0,.08);}
+    :root{
+      --bg:#fcfbfd;
+      --panel:#ffffff;
+      --text:#2e2a2f;
+      --muted:#6f6874;
+      --brand:#F4A300;
+      --brand-2:#9bbf9c;
+      --ring: rgba(244,163,0,.35);
+      --radius:16px;
+      --shadow:0 6px 20px rgba(0,0,0,.08);
+    }
     *{box-sizing:border-box}html,body{height:100%}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);}
     a{color:var(--brand);text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .container{max-width:900px;margin:0 auto;padding:0 20px}
     .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);background:rgba(252,251,253,.9);border-bottom:1px solid rgba(0,0,0,.06)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px;color:var(--text)}
@@ -26,22 +36,20 @@
     .menu{display:flex;align-items:center;gap:22px}.menu a{opacity:.9;color:var(--text)}.menu a:hover{opacity:1;color:var(--brand)}
     .cta{background:var(--brand);color:white;font-weight:700;padding:10px 14px;border-radius:12px;box-shadow:var(--shadow)}
     .burger{display:none;width:36px;height:36px;border:1px solid rgba(0,0,0,.1);border-radius:10px;align-items:center;justify-content:center}
-    .hero{padding:86px 0 40px}
-    .hero h1{font-size:clamp(32px,5vw,54px);line-height:1.05;margin:0 0 16px;font-weight:800;color:var(--brand)}
-    .hero p{font-size:clamp(16px,2.6vw,20px);color:var(--muted);max-width:820px}
-    .hero-actions{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
-    .button{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:14px;border:1px solid rgba(0,0,0,.08);background:var(--panel);color:var(--text)}
+    .hero{padding:86px 0 24px}
+    .hero h1{font-size:clamp(32px,5vw,54px);line-height:1.05;margin:0 0 8px;font-weight:800;color:var(--brand)}
+    .lead{color:var(--muted);font-size:clamp(16px,2.6vw,18px)}
+    section{padding:42px 0}
+    .panel{background:var(--panel);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .muted{color:var(--muted)}
+    img.resp{width:100%;display:block;border-radius:12px;border:1px solid rgba(0,0,0,.06)}
+    h2{margin:0 0 14px}
+    .button{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid rgba(0,0,0,.08);background:var(--panel);color:var(--text)}
     .button.primary{background:var(--brand);color:white;border-color:transparent;font-weight:800}
-    section{padding:68px 0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--panel);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-    .card h3{margin:0 0 8px;color:var(--brand)}.card p{margin:0;color:var(--muted)}
-    .panel{background:var(--panel);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .grid-2{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:center}
-    .list{display:grid;gap:12px}.list-item{display:flex;gap:12px;align-items:flex-start}
-    .dot{width:10px;height:10px;border-radius:50%;background:var(--brand);margin-top:9px}
-    .quote{font-size:18px;color:var(--text);line-height:1.55}
     footer{padding:30px 0;color:var(--muted);border-top:1px solid rgba(0,0,0,.06)}
-    @media (max-width:880px){.cards{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.menu{display:none}.burger{display:flex}}
+    @media (max-width:880px){.menu{display:none}.burger{display:flex}}
+    #calWrap{padding:0;border-radius:12px;overflow:visible;border:1px solid rgba(0,0,0,.06);box-shadow:var(--shadow);}
+    #calWrap .calendly-inline-widget{width:100%;height:800px;}
   </style>
 </head>
 <body>
@@ -57,10 +65,10 @@
         <span>Melissa Anran Fan</span>
       </a>
       <div class="menu" id="menu">
-        <a href="#features">What is Somatic Bodywork?</a>
         <a href="#about">About</a>
-        <a href="#sessions">Sessions &amp; Fees</a>
-        <a href="#contact" class="cta">Book a Session</a>
+        <a href="#somatic">What is Somatic Bodywork?</a>
+        <a href="#sessions">Sessions & Fees</a>
+        <a href="#contact" class="cta">Book</a>
       </div>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
@@ -69,39 +77,32 @@
   <header class="hero" id="home">
     <div class="container">
       <h1>Welcome</h1>
-      <p>Hi, I’m Melissa Anran Fan. I’m a healing arts practitioner, somatic bodyworker, community organizer, mama to 2 kids, and human in process living in service to collective liberation. Somatic bodywork is my current offering toward a more loving, open, and just world.</p>
-      <p>I have a MA in Counseling Psychology with a concentration in Expressive Arts Therapy from CIIS and additional training in somatic therapy, eco therapy, and hypnotherapy. I have worked as a trauma therapist for BIPOC youth in Oakland, a relationship coach for co-housing cooperatives, facilitated retreats for grassroots orgs, and run a variety of educational and healing workshops.</p>
-      <div class="hero-actions">
-        <a class="button primary" href="#contact">Book a Session</a>
-        <a class="button" href="#sessions">Sessions & Fees</a>
-      </div>
     </div>
   </header>
 
-  <section id="features">
+  <section>
     <div class="container">
-      <h2>What is Somatic Bodywork?</h2>
-      <div class="cards">
-        <div class="card"><h3>Body-based healing</h3><p>Our bodies carry the stories of our lives, our ancestors, and our communities. Somatic bodywork is a hands-on way of working with and through the body to align with your values, longings, and commitments.</p></div>
-        <div class="card"><h3>What to expect</h3><p>Sessions take place fully clothed on a massage table. With touch, breath, movement, and awareness, we explore your unique holding patterns, shapes, and areas of tension to create space to express, release, and open into deeper aliveness.</p></div>
-        <div class="card"><h3>During sessions</h3><p>You may experience a wide variety of sensations and emotions. Memories and visions may surface. My role is to support you through whatever arises, at your pace.</p></div>
-      </div>
+      <img class="resp" src="https://dummyimage.com/1200x700/ffffff/6f6874&text=Add+photo+of+Melissa+or+studio" alt="Photo placeholder">
     </div>
   </section>
 
   <section id="about">
-    <div class="container grid-2">
-      <div>
-        <h2>About Melissa</h2>
-        <p class="muted">MA in Counseling Psychology (Expressive Arts Therapy, CIIS) with additional training in somatic therapy, eco therapy, and hypnotherapy. Experience includes trauma therapy for BIPOC youth in Oakland, relationship coaching for co-housing cooperatives, facilitation for grassroots retreats, and educational/healing workshops.</p>
-        <div class="list">
-          <div class="list-item"><span class="dot"></span><div><strong>Trauma-informed</strong><br><span class="muted">Consent-based, paced, and nervous-system aware.</span></div></div>
-          <div class="list-item"><span class="dot"></span><div><strong>Community-rooted</strong><br><span class="muted">In service to collective liberation and access.</span></div></div>
-          <div class="list-item"><span class="dot"></span><div><strong>Integrative</strong><br><span class="muted">Somatic, expressive arts, eco-somatics, and hypnotherapy.</span></div></div>
-        </div>
+    <div class="container">
+      <div class="panel">
+        <p>Hi, I’m Melissa Anran Fan. I’m a healing arts practitioner, somatic bodyworker, community organizer, mama to 2 kids, and human in process living in service to collective liberation.</p>
+        <p>I have a MA in Counseling Psychology with a concentration in Expressive Arts Therapy from CIIS and have additional training in somatic therapy, eco therapy, and hypnotherapy. I have worked as a trauma therapist for BIPOC youth in Oakland, a relationship coach for co-housing cooperatives, facilitated retreats for grassroots orgs, and run a variety of educational and healing workshops.</p>
+        <p>Somatic bodywork is my current offering toward a more loving, open, and just world. After having trained in and offered many different modalities of healing over the years, I have found somatic bodywork to be the most effective at creating lasting change.</p>
       </div>
-      <div class="panel" style="padding:20px;">
-        <img src="https://dummyimage.com/900x600/ffffff/6f6874&text=Add+photo+of+Melissa+or+studio" alt="Photo of Melissa or studio" style="width:100%;border-radius:12px;display:block;" />
+    </div>
+  </section>
+
+  <section id="somatic">
+    <div class="container">
+      <h2>What is somatic bodywork?</h2>
+      <div class="panel">
+        <p>Our bodies carry the stories of our lives, our ancestors, and our communities. Somatic bodywork is a hands-on way of working directly with and through the body to attune to and align with your values, longings, and commitments.</p>
+        <p>Sessions take place fully clothed on a massage table. With a combination of touch, breath, movement, and awareness, we gently explore your unique holding patterns, shapes, and areas of tension. Together, we create space for you to express, release, and open into deeper aliveness.</p>
+        <p>In somatic bodywork, you may experience a wide variety of sensations and emotions. Memories and visions may surface. My role is to support you through whatever arises.</p>
       </div>
     </div>
   </section>
@@ -109,13 +110,14 @@
   <section id="sessions">
     <div class="container">
       <h2>Sessions &amp; Fees</h2>
-      <div class="cards">
-        <article class="card"><h3>In-Office (North Oakland)</h3><p><strong>60 min — $150</strong><br><strong>90 min — $225</strong></p></article>
-        <article class="card"><h3>Home Visits</h3><p><strong>+$50 travel fee</strong> (within 15 minutes of the office). Inquire for longer distances.</p></article>
-        <article class="card"><h3>Access &amp; Mutual Aid</h3><p><strong>Sliding Scale:</strong> A number of $75–$125 spots are reserved for low-income BIPOC clients. Please reach out to request one.<br><strong>Mutual Aid for Gaza:</strong> Each month, I offer 2 sessions in exchange for a full-fee donation to a verified fundraiser for a family in Gaza.</p></article>
-      </div>
-      <div class="panel" style="padding:20px; margin-top:18px;">
-        <p>Here is the <a href="#" id="donation-link">donation page</a> for the family I support each month. Here is a <a href="#" id="fundraiser-sheet">spreadsheet of verified fundraisers</a> for families in Gaza.</p>
+      <div class="panel">
+        <p>I offer sessions in my North Oakland office or in your home.</p>
+        <p><strong>Rates</strong><br>
+           60 min – $150<br>
+           90 min – $225<br>
+           Home visits – additional $50 travel fee (within 15 minutes of my office)</p>
+        <p><strong>Sliding Scale:</strong> A number of $75 - $125 sliding scale spots are reserved for low income BIPOC clients. Please reach out to request one.</p>
+        <p><strong>Mutual Aid for Gaza:</strong> Each month, I offer 2 somatic bodywork sessions in exchange for a full-fee donation to a verified fundraiser for a family in Gaza. Please contact me to book a mutual aid session. Here is the donation page for the family that I support each month. Here is a spreadsheet of verified fundraisers for families in Gaza.</p>
       </div>
     </div>
   </section>
@@ -123,12 +125,14 @@
   <section id="contact">
     <div class="container">
       <h2>Book a Session</h2>
-      <div class="panel" style="padding:0;">
-        <div class="calendly-inline-widget"
+      <div id="calWrap" class="panel">
+        <div id="calWidget" class="calendly-inline-widget"
              data-url="https://calendly.com/melissa_fan/somatic-bodywork?month=2025-09"
-             style="min-width:320px; height:800px;">
+             style="min-width:320px;height:800px;">
         </div>
       </div>
+      <p class="muted" style="margin-top:10px">Prefer email? <a href="mailto:melissa.anran.fan@gmail.com?subject=Somatic%20Bodywork%20Session%20Inquiry">melissa.anran.fan@gmail.com</a></p>
+      <p class="muted">Address: 6536 Telegraph Ave. Suite A101, Oakland, CA 94609</p>
     </div>
   </section>
 
@@ -142,8 +146,10 @@
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     const burger=document.getElementById('burger');const menu=document.getElementById('menu');
-    burger.addEventListener('click',()=>{const open=menu.style.display==='flex';menu.style.display=open?'none':'flex';menu.style.flexDirection='column';menu.style.gap='14px';menu.style.padding='12px 0 16px';burger.setAttribute('aria-expanded',String(!open));});
+    if(burger){burger.addEventListener('click',()=>{const open=menu.style.display==='flex';menu.style.display=open?'none':'flex';menu.style.flexDirection='column';menu.style.gap='14px';menu.style.padding='12px 0 16px';burger.setAttribute('aria-expanded',String(!open));});}
     document.getElementById('year').textContent=new Date().getFullYear();
+    function sizeCalendly(){const navH=document.querySelector('.nav').offsetHeight||0;let target=window.innerHeight-navH-100;if(target<700)target=700;const w=document.getElementById('calWidget');if(w)w.style.height=target+'px';}
+    window.addEventListener('load',sizeCalendly);window.addEventListener('resize',sizeCalendly);window.addEventListener('orientationchange',sizeCalendly);
   </script>
 </body>
 </html>
