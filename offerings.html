@@ -93,4 +93,89 @@
       </div>
     </section>
 
-    <section class="secti
+    <section class="section">
+      <h2 class="h2">Somatic bodywork</h2>
+      <div class="card prose">
+        <p class="quote">“Through bodywork, we go directly to our tissues—and to the patterns they carry—to meet them, relieve them, and create the conditions for lasting change.” — Strozzi Institute for Somatics</p>
+        <p>We are fundamentally wired as human beings to attune to and respond to touch from the moment of birth. I believe that there is healing that the body can only access through intentional touch.</p>
+        <p>Somatic bodywork is a gentle, hands-on practice that works with and through the body to shift long held patterns, tensions, and ways of being through a combination of touch, breath, movement, and awareness.</p>
+        <p><strong>Bodywork takes place fully clothed on a massage table</strong> and is always guided by your choice and consent.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="h2">Somatic coaching for parents group</h2>
+      <div class="card prose">
+        <p>I am in the process of building a somatic coaching group for parents who are on the path of liberatory parenthood. Please check back for more details soon or get on my email list to find out when it opens.</p>
+        <a class="btn ghost" href="contact.html#newsletter">Get on the email list</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="h2">Workshops</h2>
+      <div class="card prose">
+        <p>I run a few public workshops throughout the year, both through my own practice and in partnership with the Asian American Justice and Innovation Labs. Sign up for my mailing list to get notified of workshops.</p>
+        <a class="btn ghost" href="contact.html#newsletter">Newsletter sign up</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="h2">Consultation</h2>
+      <div class="card prose">
+        <p>I offer consultation to other healing arts practitioners—therapists, coaches, bodyworkers, and more—in two capacities:</p>
+        <p>1) From a somatics and expressive arts perspective for practitioners who want to further integrate those modalities into their practice, and<br>
+           2) From a decolonial and social justice orientation for practitioners who want a deeper understanding of their clients or another perspective on their overall practice.</p>
+        <a class="btn primary" href="contact.html">Contact / Book</a>
+      </div>
+    </section>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Melissa Anran Fan</span>
+    <span><a href="contact.html">Contact</a></span>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.rr-dd-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const dd = btn.closest('.rr-dd');
+      const isOpen = dd.classList.contains('open');
+
+      document.querySelectorAll('.rr-dd.open').forEach(x => {
+        x.classList.remove('open');
+        const b = x.querySelector('.rr-dd-btn');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        dd.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      e.stopPropagation();
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.rr-dd.open').forEach(dd => {
+      dd.classList.remove('open');
+      const b = dd.querySelector('.rr-dd-btn');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const burger = document.querySelector('.rr-burger');
+  const mobile = document.querySelector('.rr-mobile');
+  if (burger && mobile) {
+    burger.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      mobile.hidden = open;
+    });
+  }
+</script>
+
+</body>
+</html>
