@@ -3,127 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Melissa Anran Fan — Somatic Bodywork</title>
-  <meta name="description" content="Somatic bodywork in North Oakland by Melissa Anran Fan. Simple, gentle, body-based care." />
-  <meta name="theme-color" content="#000000" />
+  <title>Melissa Anran Fan Somatics</title>
+  <meta name="description" content="Somatics for lasting change — somatic bodywork & coaching in North Oakland." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#111111;
-      --muted:#333333;
-      --max:820px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.7;
-      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-    }
-    a{color:var(--text); text-decoration:underline}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px}
-    header.site{padding:8px 0}
-    .brand{font-size:16px; letter-spacing:.2px; color:var(--muted)}
-    h1,h2{font-weight:800; margin:0 0 10px; color:var(--text)}
-    h1{font-size:36px; line-height:1.25}
-    h2{font-size:24px; line-height:1.35; margin-top:30px}
-    p{margin:0 0 14px}
-    .profile-pic {
-      width: 50%;
-      max-width: 400px;
-      display: block;
-      margin: 20px auto;
-      border-radius: 10px;
-    }
-    /* Full-bleed Calendly */
-    .fullbleed{width:100vw; margin-left:calc(50% - 50vw); padding:0}
-    #calWrap{margin-top:0}
-    .calendly-inline-widget{width:100%; height:900px;}
-    @media (max-width:640px){
-      .calendly-inline-widget{height:1000px}
-      h1{font-size:30px} h2{font-size:22px}
-      .profile-pic{width:70%; max-width:none;}
-    }
-    footer{padding:32px 0; color:var(--muted)}
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="wrap">
-    <header class="site">
-      <div class="brand">Melissa Anran Fan — Somatic Bodywork</div>
-    </header>
 
-    <h1>Touch to heal the spirit</h1>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Melissa Anran Fan Somatics</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="who-i-work-with.html">Who I work with</a>
+      <a href="offerings.html">Offerings</a>
+      <a href="rates-faq.html">Rates + FAQ</a>
+      <a href="contact.html">Book</a>
+    </nav>
+  </div>
+</header>
 
-    <img src="melissa.jpeg" alt="Photo of Melissa Anran Fan" class="profile-pic">
+<main class="container">
+  <section class="hero">
+    <p class="kicker">Somatics for lasting change</p>
+    <h1 class="h1">What might be possible if you were more present, open, and alive?</h1>
+    <p class="subhead">Your body is a pathway toward deeper liberation. Let’s walk the path together.</p>
 
-    <section id="about">
-      <h2>Welcome</h2>
-      <p><strong>Hi, I’m Melissa Anran Fan.</strong></p>
-      <p>I’m a healing arts practitioner, somatic bodyworker, community organizer, mama to 2 kids, and human in process living in service to collective liberation.</p>
-      <p>I have a MA in Counseling Psychology with a concentration in Expressive Arts Therapy from CIIS and have additional training in somatic therapy, eco therapy, and hypnotherapy. I have worked as a trauma therapist for BIPOC youth in Oakland, a relationship coach for co-housing cooperatives, facilitated retreats for grassroots orgs, and run a variety of educational and healing workshops.</p>
-      <p><strong>Somatic bodywork is my current offering toward a more loving, open, and just world.</strong> After having trained in and offered many different modalities of healing over the years, I have found somatic bodywork to be the most effective at creating lasting change.</p>
-    </section>
+    <div class="cta-row">
+      <a class="btn primary" href="contact.html#book">Book a Session</a>
+      <a class="btn ghost" href="contact.html#newsletter">Email list sign up</a>
+    </div>
 
-    <section id="somatic">
-      <h2>What is somatic bodywork?</h2>
-      <p>Somatic bodywork is a gentle, hands-on practice that works directly with and through the body to shift long held patterns, tensions, and ways of being. With a combination of touch, breath, movement, and awareness, we create space for you to sense, express, and open into deeper aliveness and attunement with who you want to be in the world.</p>
-      <p>Somatic bodywork is for everyone who longs for a different form of embodiment. Whether you are craving release from chronic pain, wanting to shed intergenerational trauma to be a more present parent, exploring your gender, on a journey of unmasking, or being called to come home to your spirit, somatic bodywork can support you as you walk a new path of being.</p>
-      <p style="font-style:italic;">“Through bodywork, we go directly to our tissues—and to the patterns they carry—to meet them, relieve them, and create the conditions for lasting change.” — Strozzi Institute for Somatics</p>
-    </section>
+    <div class="hero-media">
+      <!-- Replace with your preferred image path -->
+      <img src="assets/hero.jpg" alt="Hands in water — a calm, grounding image" />
+    </div>
+  </section>
 
-    <section id="sessions">
-      <h2>Sessions &amp; Fees</h2>
-      <p>I offer sessions in my North Oakland office or in your home.</p>
-      <p><strong>Rates</strong><br>
-         • 60 min – $165<br>
-         • 90 min – $245<br>
-         • Home visits – additional $50 travel fee (within Berkeley or Oakland)</p>
-      <p>There is a discount for buying 4 or 6 sessions upfront. A 4 session package is $600 and a 6 session package is $880. Please reach out to book a package.</p>
-      <p><strong>Sliding Scale:</strong> A number of sliding scale spots are reserved for low income BIPOC clients. Please reach out to request one.</p>
-      <p><strong>Mutual Aid for Gaza:</strong> 10% of all profits go toward mutual aid for families in Gaza through Watermelon Connections. In addition, I occasionally offer sessions in exchange for a full-fee donation to specific families in Gaza. Please reach out if you’d like to be notified about these sessions.</p>
-    </section>
-  </main>
+  <section class="section">
+    <div class="grid">
+      <div class="card prose">
+        <h2 class="h2">Start here</h2>
+        <p>If you’re new, I recommend reading <a href="about.html">About Me</a> and <a href="offerings.html">Offerings</a>, then heading to <a href="contact.html#book">Book a Session</a>.</p>
+        <p class="small">North Oakland • In-office + limited home visits</p>
+      </div>
 
-  <section class="fullbleed" id="contact">
-    <div id="calWrap">
-      <div id="calWidget" class="calendly-inline-widget"
-           data-url="https://calendly.com/melissa_fan/somatic-bodywork?month=2025-09"
-           style="min-width:320px;height:900px;">
+      <div class="card prose">
+        <h2 class="h2">Quick links</h2>
+        <p><a href="rates-faq.html">Rates + FAQ</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="contact.html#newsletter">Newsletter</a></p>
       </div>
     </div>
   </section>
 
-  <main class="wrap">
-    <section id="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:melissa.anran.fan@gmail.com?subject=Somatic%20Bodywork%20Session%20Inquiry">melissa.anran.fan@gmail.com</a><br>
-         <strong>Address:</strong> 6536 Telegraph Ave. Suite A101, Oakland, CA 94609</p>
-    </section>
+  <footer class="footer">
+    <span>© <span id="year"></span> Melissa Anran Fan</span>
+    <span><a href="mailto:melissa.anran.fan@gmail.com?subject=Somatic%20Bodywork%20Session%20Inquiry">melissa.anran.fan@gmail.com</a></span>
+  </footer>
+</main>
 
-    <footer>
-      <small>&copy; <span id="year"></span> Melissa Anran Fan</small>
-    </footer>
-  </main>
-
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function sizeCalendly(){
-      const widget = document.getElementById('calWidget');
-      if(!widget) return;
-      let target = window.innerHeight - 24;
-      if (target < 720) target = 720;
-      widget.style.height = target + 'px';
-    }
-    window.addEventListener('load', sizeCalendly);
-    window.addEventListener('resize', sizeCalendly);
-    window.addEventListener('orientationchange', sizeCalendly);
-  </script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
