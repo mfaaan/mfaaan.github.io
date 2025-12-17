@@ -4,139 +4,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Who I Work With — Melissa Anran Fan Somatics</title>
-  <meta name="description" content="Who Melissa works with — somatic coaching and bodywork." />
+  <meta name="description" content="Who Melissa Anran Fan works with and what sessions can support." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header class="rr-header">
-  <div class="rr-inner">
+<header class="site-header site-header--stacked">
+  <div class="header-shell">
 
-    <nav class="rr-nav rr-nav-left" aria-label="Primary left">
-      <a class="rr-link" href="index.html">Home</a>
-
-      <div class="rr-dd">
-        <button class="rr-dd-btn" type="button" aria-expanded="false">
-          More Offerings <span class="rr-caret">▾</span>
-        </button>
-        <div class="rr-dd-menu" role="menu">
-          <a role="menuitem" href="offerings.html">Offerings</a>
-          <a role="menuitem" href="rates-faq.html">Rates + FAQ</a>
-          <a role="menuitem" href="who-i-work-with.html">Who I work with</a>
-        </div>
-      </div>
-    </nav>
-
-    <a class="rr-brand" href="index.html">
-      <span class="rr-brand-top">Melissa Anran Fan</span>
-      <span class="rr-brand-bottom">Somatics</span>
+    <a href="index.html" class="brand" aria-label="Home">
+      <span class="brand-top">Melissa Anran Fan</span>
+      <span class="brand-bottom">Somatics</span>
     </a>
 
-    <nav class="rr-nav rr-nav-right" aria-label="Primary right">
-      <div class="rr-dd">
-        <button class="rr-dd-btn" type="button" aria-expanded="false">
-          Book <span class="rr-caret">▾</span>
-        </button>
-        <div class="rr-dd-menu" role="menu">
-          <a role="menuitem" href="contact.html#book">Book a session</a>
-          <a role="menuitem" href="contact.html#newsletter">Email list</a>
-        </div>
-      </div>
-
-      <div class="rr-dd">
-        <button class="rr-dd-btn" type="button" aria-expanded="false">
-          More <span class="rr-caret">▾</span>
-        </button>
-        <div class="rr-dd-menu" role="menu">
-          <a role="menuitem" href="about.html">About</a>
-          <a role="menuitem" href="contact.html">Contact</a>
-        </div>
-      </div>
+    <nav class="nav-center" aria-label="Primary">
+      <a href="about.html" class="nav-link">About Me</a>
+      <a href="who-i-work-with.html" class="nav-link is-active">Who I Work With</a>
+      <a href="offerings.html" class="nav-link">Work With Me</a>
+      <a href="rates-faq.html" class="nav-link">Rates &amp; FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
 
-    <button class="rr-burger" type="button" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-  </div>
-
-  <div class="rr-mobile" hidden>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="who-i-work-with.html">Who I work with</a>
-    <a href="offerings.html">Offerings</a>
-    <a href="rates-faq.html">Rates + FAQ</a>
-    <a href="contact.html#book">Book</a>
-    <a href="contact.html#newsletter">Email list</a>
-    <a href="contact.html">Contact</a>
   </div>
 </header>
 
-<main class="container">
-  <section style="padding-top:24px;">
-    <p class="kicker">Who I work with</p>
-    <h1 class="h1" style="font-size:40px;">For folks longing for change — and ready for a different form of embodiment.</h1>
-
-    <div class="card prose" style="margin-top:18px;">
-      <p>I work with folks who are longing for change and are ready for a different form of embodiment. Whether you are craving release from chronic pain, wanting to shed intergenerational trauma to be a more present parent, exploring your gender, on a journey of unmasking, or being called to come home to your spirit, I can support you as you walk a new path of being.</p>
-      <p>I feel particularly called to work with folks who are committed to self growth as a part of a larger vision of collective liberation for all, especially those who are BIPOC, queer, neurodivergent, disabled, or otherwise marginalized.</p>
-
-      <div class="cta-row" style="margin-top:14px;">
-        <a class="btn primary" href="contact.html#book">Book a Session</a>
-        <a class="btn ghost" href="rates-faq.html">See Rates + FAQ</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <span>© <span id="year"></span> Melissa Anran Fan</span>
-    <span><a href="contact.html">Contact</a></span>
-  </footer>
+<main class="page">
+  <h1>Who I Work With</h1>
+  <p>
+    Replace this with a clear description of who your work is for, and what kinds of
+    experiences or intentions bring people to you.
+  </p>
 </main>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  document.querySelectorAll('.rr-dd-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const dd = btn.closest('.rr-dd');
-      const isOpen = dd.classList.contains('open');
-
-      document.querySelectorAll('.rr-dd.open').forEach(x => {
-        x.classList.remove('open');
-        const b = x.querySelector('.rr-dd-btn');
-        if (b) b.setAttribute('aria-expanded', 'false');
-      });
-
-      if (!isOpen) {
-        dd.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-      e.stopPropagation();
-    });
-  });
-
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.rr-dd.open').forEach(dd => {
-      dd.classList.remove('open');
-      const b = dd.querySelector('.rr-dd-btn');
-      if (b) b.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  const burger = document.querySelector('.rr-burger');
-  const mobile = document.querySelector('.rr-mobile');
-  if (burger && mobile) {
-    burger.addEventListener('click', () => {
-      const open = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', String(!open));
-      mobile.hidden = open;
-    });
-  }
-</script>
 
 </body>
 </html>
