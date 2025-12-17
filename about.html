@@ -12,21 +12,71 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">Melissa Anran Fan Somatics</a>
-    <nav class="nav" aria-label="Primary">
-      <a href="about.html">About</a>
-      <a href="who-i-work-with.html">Who I work with</a>
-      <a href="offerings.html">Offerings</a>
-      <a href="rates-faq.html">Rates + FAQ</a>
-      <a href="contact.html">Book</a>
+<header class="rr-header">
+  <div class="rr-inner">
+
+    <nav class="rr-nav rr-nav-left" aria-label="Primary left">
+      <a class="rr-link" href="index.html">Home</a>
+
+      <div class="rr-dd">
+        <button class="rr-dd-btn" type="button" aria-expanded="false">
+          More Offerings <span class="rr-caret">▾</span>
+        </button>
+        <div class="rr-dd-menu" role="menu">
+          <a role="menuitem" href="offerings.html">Offerings</a>
+          <a role="menuitem" href="rates-faq.html">Rates + FAQ</a>
+          <a role="menuitem" href="who-i-work-with.html">Who I work with</a>
+        </div>
+      </div>
     </nav>
+
+    <a class="rr-brand" href="index.html">
+      <span class="rr-brand-top">Melissa Anran Fan</span>
+      <span class="rr-brand-bottom">Somatics</span>
+    </a>
+
+    <nav class="rr-nav rr-nav-right" aria-label="Primary right">
+      <div class="rr-dd">
+        <button class="rr-dd-btn" type="button" aria-expanded="false">
+          Book <span class="rr-caret">▾</span>
+        </button>
+        <div class="rr-dd-menu" role="menu">
+          <a role="menuitem" href="contact.html#book">Book a session</a>
+          <a role="menuitem" href="contact.html#newsletter">Email list</a>
+        </div>
+      </div>
+
+      <div class="rr-dd">
+        <button class="rr-dd-btn" type="button" aria-expanded="false">
+          More <span class="rr-caret">▾</span>
+        </button>
+        <div class="rr-dd-menu" role="menu">
+          <a role="menuitem" href="about.html">About</a>
+          <a role="menuitem" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <button class="rr-burger" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <div class="rr-mobile" hidden>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="who-i-work-with.html">Who I work with</a>
+    <a href="offerings.html">Offerings</a>
+    <a href="rates-faq.html">Rates + FAQ</a>
+    <a href="contact.html#book">Book</a>
+    <a href="contact.html#newsletter">Email list</a>
+    <a href="contact.html">Contact</a>
   </div>
 </header>
 
 <main class="container">
-  <section class="section" style="border-top:0; padding-top:0;">
+  <section style="padding-top:24px;">
     <p class="kicker">About Me</p>
     <h1 class="h1" style="font-size:40px;">Hi, I’m Melissa Anran Fan.</h1>
 
@@ -44,7 +94,6 @@
       </div>
 
       <aside class="card">
-        <!-- optional headshot -->
         <img src="assets/melissa.jpeg" alt="Photo of Melissa Anran Fan" style="width:100%; border-radius:14px; border:1px solid var(--border);" />
         <p class="small" style="margin-top:12px;">Want to start? <a href="contact.html#book">Book a session</a>.</p>
       </aside>
@@ -57,6 +106,46 @@
   </footer>
 </main>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.rr-dd-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const dd = btn.closest('.rr-dd');
+      const isOpen = dd.classList.contains('open');
+
+      document.querySelectorAll('.rr-dd.open').forEach(x => {
+        x.classList.remove('open');
+        const b = x.querySelector('.rr-dd-btn');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        dd.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      e.stopPropagation();
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.rr-dd.open').forEach(dd => {
+      dd.classList.remove('open');
+      const b = dd.querySelector('.rr-dd-btn');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const burger = document.querySelector('.rr-burger');
+  const mobile = document.querySelector('.rr-mobile');
+  if (burger && mobile) {
+    burger.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      mobile.hidden = open;
+    });
+  }
+</script>
+
 </body>
 </html>
