@@ -13,7 +13,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: #111;
   background: #fff;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* =========================
@@ -106,7 +106,7 @@ body {
   left: 0;
 }
 
-/* Active page (add .is-active in HTML) */
+/* Active page */
 
 .nav-link.is-active::after {
   width: 100%;
@@ -177,7 +177,6 @@ body {
 
 .hero-content p {
   font-size: 20px;
-  line-height: 1.6;
   color: #333;
   margin: 0 0 26px;
 }
@@ -215,17 +214,16 @@ body {
 }
 
 /* =========================
-   About Page (single-column editorial)
+   About Page (single column, editorial)
    ========================= */
 
 .about-onecol {
-  max-width: 1100px;
   margin: 0 auto 90px;
   padding: 0 22px;
 }
 
 .about-wrap {
-  max-width: 860px;
+  max-width: 700px;       /* narrower text column */
   margin: 48px auto 0;
 }
 
@@ -238,8 +236,8 @@ body {
 }
 
 .about-title {
-  font-size: clamp(44px, 6vw, 70px);
-  line-height: 1.02;
+  font-size: clamp(42px, 6vw, 64px);
+  line-height: 1.05;
   margin: 0 0 18px;
   font-weight: 800;
 }
@@ -251,17 +249,20 @@ body {
 }
 
 .about-lede {
-  font-size: 22px;
-  line-height: 1.65;
+  font-size: 21px;
+  line-height: 1.7;
   color: #222;
-  margin: 0 0 26px;
+  margin: 0 0 28px;
 }
 
+/* image */
+
 .about-image {
+  max-width: 620px;
+  margin: 22px auto 30px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 18px 60px rgba(0,0,0,0.10);
-  margin: 18px 0 24px;
 }
 
 .about-image img {
@@ -270,15 +271,19 @@ body {
   display: block;
 }
 
+/* divider */
+
 .about-rule {
   border: 0;
   height: 1px;
   background: rgba(0,0,0,0.12);
-  margin: 34px 0 34px;
+  margin: 36px 0 36px;
 }
 
+/* sections */
+
 .about-section {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .about-section h2 {
@@ -286,34 +291,36 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   margin: 0 0 14px;
-  color: #111;
 }
 
 .about-section p {
-  margin: 0;
   font-size: 18px;
   color: #333;
-  line-height: 1.8;
+  line-height: 1.85;
+  margin: 0;
 }
 
-/* callout like a highlighted editorial block */
+/* callout */
+
 .about-callout {
-  margin: 34px 0;
-  padding: 18px 20px;
+  margin: 36px 0;
+  padding: 20px 22px;
   border-left: 3px solid rgba(0,0,0,0.35);
   background: rgba(0,0,0,0.02);
   border-radius: 12px;
 }
 
 .about-callout p {
-  margin: 0;
   font-size: 18px;
   color: #222;
-  line-height: 1.75;
+  line-height: 1.8;
+  margin: 0;
 }
 
+/* CTA */
+
 .about-cta {
-  margin-top: 28px;
+  margin-top: 30px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -327,8 +334,7 @@ body {
   .brand-bottom { font-size: 24px; }
   .nav-center { gap: 22px; }
   .about-wrap { margin-top: 34px; }
-  .about-title { font-size: clamp(38px, 9vw, 56px); }
-  .about-lede { font-size: 20px; }
+  .about-lede { font-size: 19px; }
 }
 
 @media (max-width: 640px) {
@@ -346,5 +352,5 @@ body {
   .button-primary,
   .button-secondary { min-width: 170px; }
 
-  .about-lede { font-size: 18px; }
+  .about-title { font-size: 40px; }
 }
