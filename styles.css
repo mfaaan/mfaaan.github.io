@@ -90,63 +90,58 @@ body {
 }
 
 /* =========================
-   Hero Image + Overlay
+   Home Hero
    ========================= */
 
-.hero-image {
-  position: relative;
+.home-hero {
   max-width: 1100px;
   margin: 40px auto 80px;
   padding: 0 22px;
 }
 
-.hero-image img {
+.hero-media {
+  position: relative;
+}
+
+.hero-media img {
   width: 100%;
   height: auto;
   border-radius: 16px;
   display: block;
 }
 
-.hero-overlay {
+/* black label on image */
+.hero-tag {
   position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0)
-  );
-  display: flex;
-  align-items: flex-end;
-}
-
-.hero-text {
-  padding: 36px;
-  max-width: 720px;
+  top: 24px;
+  left: 24px;
+  background: #000;
   color: #fff;
-}
-
-.hero-eyebrow {
+  padding: 10px 14px;
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin-bottom: 14px;
-  opacity: 0.9;
+  line-height: 1;
+  border-radius: 10px;
 }
 
-.hero-text h1 {
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.15;
+/* content below image */
+.hero-content {
+  margin-top: 28px;
+  max-width: 820px;
+}
+
+.hero-content h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.1;
   margin: 0 0 14px;
-  font-weight: 600;
+  font-weight: 800;
 }
 
-.hero-text p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 22px;
-  opacity: 0.95;
+.hero-content p {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 22px;
 }
 
 /* =========================
@@ -168,14 +163,14 @@ body {
   font-size: 14px;
 }
 
-.hero-text .button-primary {
-  background: #fff;
-  color: #111;
+.button-primary {
+  background: #111;
+  color: #fff;
 }
 
-.hero-text .button-secondary {
-  border: 1px solid rgba(255,255,255,0.6);
-  color: #fff;
+.button-secondary {
+  border: 1px solid rgba(0,0,0,0.2);
+  color: #111;
 }
 
 /* =========================
@@ -200,11 +195,14 @@ body {
 }
 
 @media (max-width: 640px) {
-  .hero-text {
-    padding: 22px;
+  .hero-tag {
+    top: 16px;
+    left: 16px;
+    font-size: 11px;
+    padding: 9px 12px;
   }
 
-  .hero-text h1 {
-    font-size: 24px;
+  .hero-content p {
+    font-size: 16px;
   }
 }
