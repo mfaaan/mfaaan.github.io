@@ -2,9 +2,7 @@
    Base
    ========================= */
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -217,45 +215,18 @@ body {
 }
 
 /* =========================
-   Interior Pages (generic)
+   About Page (single-column editorial)
    ========================= */
 
-.page {
-  max-width: 820px;
-  margin: 50px auto 90px;
-  padding: 0 22px;
-}
-
-.page h1 {
-  font-size: 40px;
-  line-height: 1.15;
-  margin: 0 0 18px;
-  font-weight: 700;
-}
-
-.page p {
-  font-size: 18px;
-  color: #333;
-  margin: 0 0 18px;
-}
-
-/* =========================
-   About Page (Fayza-ish editorial layout)
-   ========================= */
-
-.about {
+.about-onecol {
   max-width: 1100px;
   margin: 0 auto 90px;
   padding: 0 22px;
 }
 
-.about-hero {
-  padding: 46px 0 10px;
-}
-
-.about-hero-inner {
-  max-width: 920px;
-  margin: 0 auto;
+.about-wrap {
+  max-width: 860px;
+  margin: 48px auto 0;
 }
 
 .about-kicker {
@@ -273,10 +244,6 @@ body {
   font-weight: 800;
 }
 
-.about-intro {
-  max-width: 780px;
-}
-
 .about-hello {
   font-size: 20px;
   font-weight: 700;
@@ -285,94 +252,53 @@ body {
 
 .about-lede {
   font-size: 22px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #222;
-  margin: 0;
+  margin: 0 0 26px;
 }
 
-/* grid */
-
-.about-body {
-  padding-top: 36px;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 56px;
-  align-items: start;
-}
-
-/* left column */
-
-.about-aside {
-  position: sticky;
-  top: 140px; /* sits under your sticky header */
-}
-
-.about-photo {
+.about-image {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 18px 60px rgba(0,0,0,0.10);
+  margin: 18px 0 24px;
 }
 
-.about-photo img {
+.about-image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.about-note {
-  margin-top: 18px;
-  padding: 16px 18px;
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 14px;
-  background: rgba(0,0,0,0.02);
-}
-
-.about-note-title {
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.about-note p {
-  margin: 0;
-  color: #333;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* right column */
-
-.about-copy {
-  max-width: 740px;
+.about-rule {
+  border: 0;
+  height: 1px;
+  background: rgba(0,0,0,0.12);
+  margin: 34px 0 34px;
 }
 
 .about-section {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .about-section h2 {
-  font-size: 18px;
-  letter-spacing: 0.10em;
+  font-size: 12px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin: 0 0 10px;
+  margin: 0 0 14px;
+  color: #111;
 }
 
 .about-section p {
   margin: 0;
   font-size: 18px;
   color: #333;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
-/* bold highlighted paragraph */
-
+/* callout like a highlighted editorial block */
 .about-callout {
-  margin: 28px 0;
+  margin: 34px 0;
   padding: 18px 20px;
   border-left: 3px solid rgba(0,0,0,0.35);
   background: rgba(0,0,0,0.02);
@@ -387,7 +313,7 @@ body {
 }
 
 .about-cta {
-  margin-top: 30px;
+  margin-top: 28px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -398,36 +324,15 @@ body {
    ========================= */
 
 @media (max-width: 860px) {
-  .brand-bottom {
-    font-size: 24px;
-  }
-
-  .nav-center {
-    gap: 22px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .about-aside {
-    position: static;
-  }
-
-  .about-title {
-    font-size: clamp(38px, 9vw, 56px);
-  }
-
-  .about-lede {
-    font-size: 20px;
-  }
+  .brand-bottom { font-size: 24px; }
+  .nav-center { gap: 22px; }
+  .about-wrap { margin-top: 34px; }
+  .about-title { font-size: clamp(38px, 9vw, 56px); }
+  .about-lede { font-size: 20px; }
 }
 
 @media (max-width: 640px) {
-  .header-shell {
-    padding: 12px 16px 14px;
-  }
+  .header-shell { padding: 12px 16px 14px; }
 
   .hero-tag {
     top: 16px;
@@ -436,12 +341,10 @@ body {
     padding: 12px 14px;
   }
 
-  .hero-content p {
-    font-size: 16px;
-  }
+  .hero-content p { font-size: 16px; }
 
   .button-primary,
-  .button-secondary {
-    min-width: 170px;
-  }
+  .button-secondary { min-width: 170px; }
+
+  .about-lede { font-size: 18px; }
 }
