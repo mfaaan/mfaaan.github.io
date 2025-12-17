@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book / Contact — Melissa Anran Fan Somatics</title>
+  <meta name="description" content="Book a session via Calendly, or contact Melissa directly. Newsletter sign-up included." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Melissa Anran Fan Somatics</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="who-i-work-with.html">Who I work with</a>
+      <a href="offerings.html">Offerings</a>
+      <a href="rates-faq.html">Rates + FAQ</a>
+      <a href="contact.html">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section id="book" class="section" style="border-top:0; padding-top:0;">
+    <p class="kicker">Book a Session</p>
+    <h1 class="h1" style="font-size:40px;">Schedule online</h1>
+
+    <div class="card" style="margin-top:18px; padding:0; overflow:hidden;">
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/melissa_fan/somatic-bodywork"
+           style="min-width:320px;height:860px;">
+      </div>
+    </div>
+
+    <p class="small" style="margin-top:12px;">
+      Prefer email? <a href="mailto:melissa.anran.fan@gmail.com?subject=Somatic%20Bodywork%20Session%20Inquiry">melissa.anran.fan@gmail.com</a>
+    </p>
+    <p class="small">
+      6536 Telegraph Ave. Suite A101, Oakland, CA 94609
+    </p>
+  </section>
+
+  <section id="newsletter" class="section">
+    <p class="kicker">Email list sign up</p>
+    <h2 class="h2">Let’s stay connected</h2>
+    <div class="card" style="padding:0; overflow:hidden;">
+      <!-- Easiest reliable embed: MailerLite share URL as an iframe -->
+      <iframe
+        src="https://preview.mailerlite.io/forms/459272/173881041062201094/share"
+        title="Newsletter sign up"
+        style="width:100%; height:520px; border:0;">
+      </iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Melissa Anran Fan</span>
+    <span><a href="mailto:melissa.anran.fan@gmail.com?subject=Somatic%20Bodywork%20Session%20Inquiry">Email</a></span>
+  </footer>
+</main>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Optional: responsive Calendly height
+  function sizeCalendly(){
+    const w = document.querySelector('.calendly-inline-widget');
+    if(!w) return;
+    let target = Math.max(720, window.innerHeight - 220);
+    w.style.height = target + 'px';
+  }
+  window.addEventListener('load', sizeCalendly);
+  window.addEventListener('resize', sizeCalendly);
+</script>
+</body>
+</html>
