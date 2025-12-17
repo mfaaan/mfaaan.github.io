@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Melissa Anran Fan Somatics</title>
-  <meta name="description" content="Get in touch with Melissa Anran Fan to inquire about somatic coaching, bodywork, or collaboration." />
+  <meta name="description" content="Get in touch, join the newsletter, or schedule a session with Melissa Anran Fan." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,52 +41,139 @@
     <h1 class="about-title">Contact</h1>
 
     <p class="about-lede">
-      If you’re curious about working together, I’d love to hear from you.
+      If you’re feeling curious about working together, you’re welcome here.
     </p>
 
     <section class="about-section">
       <p>
-        You’re welcome to reach out with questions about somatic coaching, bodywork,
-        group offerings, workshops, or consultation. If you’re unsure whether this work
-        is a good fit, that’s okay — we can explore that together.
+        You can book a session below. If you have questions before scheduling, feel free to email me at
+        <a href="mailto:melissa.anran.fan@gmail.com"><strong>melissa.anran.fan@gmail.com</strong></a>.
       </p>
     </section>
 
-    <div class="about-callout">
-      <p>
-        Please include a little bit about what’s bringing you here and what kind of support
-        you’re seeking.
-      </p>
-    </div>
+    <hr class="about-rule">
 
-    <section class="about-section">
-      <h2>Email</h2>
-      <p>
-        <a href="mailto:melissa.anran.fan@gmail.com" style="font-weight:600;">
-          melissa.anran.fan@gmail.com
-        </a>
-      </p>
-    </section>
-
-    <section class="about-section">
+    <section class="about-section" id="newsletter">
       <h2>Newsletter</h2>
-      <p id="newsletter">
-        You can also join my email list to receive updates about openings, groups,
-        workshops, and mutual aid sessions.
+      <p>
+        Love letters, mystery missives, and occasional offers in newsletter form.
       </p>
     </section>
 
-    <div class="about-cta">
-      <a href="mailto:melissa.anran.fan@gmail.com" class="button-primary">
-        Email Me
-      </a>
-      <a href="#newsletter" class="button-secondary">
-        Join the Newsletter
-      </a>
-    </div>
+    <!-- Newsletter Embed (MailerLite) -->
+    <section id="newsletter-embed" aria-label="Newsletter signup">
+
+      <div id="mlb2-34667960" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-34667960">
+        <div class="ml-form-align-center">
+          <div class="ml-form-embedWrapper embedForm">
+
+            <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+
+              <div class="ml-form-embedContent">
+                <h4>Let's stay connected</h4>
+                <p>Love letters, mystery missives, and occasional offers in newsletter form</p>
+              </div>
+
+              <form class="ml-block-form"
+                    action="https://assets.mailerlite.com/jsonp/459272/forms/173881041062201094/subscribe"
+                    method="post"
+                    target="_blank">
+
+                <div class="ml-form-formContent horozintalForm">
+                  <div class="ml-form-horizontalRow">
+
+                    <div class="ml-input-horizontal">
+                      <div class="horizontal-fields">
+                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="fields[email]"
+                            placeholder="Email"
+                            autocomplete="email"
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ml-button-horizontal primary">
+                      <button type="submit" class="primary">Subscribe</button>
+                      <button disabled="disabled" style="display:none;" type="button" class="loading">
+                        <span class="sr-only">Loading...</span>
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+
+            <div class="ml-form-successBody row-success" style="display:none">
+              <div class="ml-form-successContent">
+                <h4>Thank you!</h4>
+                <p>You have successfully joined our subscriber list.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function ml_webform_success_34667960() {
+          var $ = ml_jQuery || jQuery;
+          $('.ml-subscribe-form-34667960 .row-success').show();
+          $('.ml-subscribe-form-34667960 .row-form').hide();
+        }
+      </script>
+
+      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+              type="text/javascript"></script>
+      <script>
+        fetch("https://assets.mailerlite.com/jsonp/459272/forms/173881041062201094/takel");
+      </script>
+
+    </section>
+
+    <hr class="about-rule">
+
+    <section class="about-section">
+      <h2>Schedule</h2>
+      <p>
+        Use the calendar below to book a session.
+      </p>
+    </section>
 
   </div>
 </main>
+
+<!-- Calendly Section -->
+<section class="fullbleed" id="contact">
+  <div id="calWrap">
+    <div id="calWidget"
+         class="calendly-inline-widget"
+         data-url="https://calendly.com/melissa_fan/somatic-bodywork?month=2025-09"
+         style="min-width:320px;height:900px;">
+    </div>
+  </div>
+</section>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script>
+  function sizeCalendly(){
+    const widget = document.getElementById('calWidget');
+    if(!widget) return;
+    let target = window.innerHeight - 24;
+    if (target < 720) target = 720;
+    widget.style.height = target + 'px';
+  }
+  window.addEventListener('load', sizeCalendly);
+  window.addEventListener('resize', sizeCalendly);
+  window.addEventListener('orientationchange', sizeCalendly);
+</script>
 
 </body>
 </html>
