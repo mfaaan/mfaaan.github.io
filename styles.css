@@ -392,3 +392,7 @@ section:has(.calendly-inline-widget) {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+
+.calendly-section {
+  padding: 16px 0;
+}
