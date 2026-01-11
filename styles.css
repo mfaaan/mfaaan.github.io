@@ -326,6 +326,7 @@ img {
 
 .about-cta {
   margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
