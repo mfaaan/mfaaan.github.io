@@ -387,3 +387,8 @@ img {
   padding: 0 !important;
   margin: 0 !important;
 }
+
+section:has(.calendly-inline-widget) {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
