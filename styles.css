@@ -377,3 +377,13 @@ img {
     font-size: 40px;
   }
 }
+
+.calendly-inline-widget {
+  padding: 0 !important;
+  margin: 0 auto;
+}
+
+.calendly-inline-widget iframe {
+  padding: 0 !important;
+  margin: 0 !important;
+}
